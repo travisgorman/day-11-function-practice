@@ -11,7 +11,7 @@ function max( num1, num2 ){
   }
 }
 
-console.log( 'function max(): The bigger of the two numbers is ' + max(3,6) );
+// console.log( 'function max(): The bigger of the two numbers is ' + max(3,6) );
 
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
@@ -28,7 +28,7 @@ function maxOfThree( num1, num2, num3 ){
     return max;
 }
 
-console.log( 'function maxOfThree(): the bigger of the three numbers is ' + maxOfThree(3,6,1) );
+// console.log( 'function maxOfThree(): the bigger of the three numbers is ' + maxOfThree(3,6,1) );
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
@@ -65,8 +65,6 @@ function isVowel2( c ){
 // Write a function translate() that will translate a text into "Rovarspraket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
-var somePhrasage = 'this is a phrase';
-
 // function rovarspraket( str ){
 //   var vowels = ['a','e','i','o','u'];
 //   var space = ' ';
@@ -101,30 +99,32 @@ function rovarspraket(str){
 // if ( isVowel( letter )){
 //   translated.push( letter )
 // }
-// === im stuck with this one
 
 
-rovarspraket( somePhrasage );
-// expects "tothohisos isos a pophrorasose"
+
+// === im stuck with this one...
+
+
+
+// expects
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse( str ){
-    var arr = str.split('');
-    var rev = arr.reverse();
-    var revString = rev.join('');
-    return revString;
-}
+// function reverse( str ){
+//     var arr = str.split('');
+//     var rev = arr.reverse();
+//     var revString = rev.join('');
+//     return revString;
+// }
 
 // reverse('travis');
 // expects "sivart"
 
 // same as above with chained methods
-function reverse2( str ){
+function reverse( str ){
   return str.split('').reverse().join('');
 }
-
 // reverse('travis');
 // expects "sivart"

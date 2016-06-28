@@ -59,7 +59,7 @@ function getLength( thing ) {
   return thing.length;
 }
 
-// getLength('string')
+// getLength('string') === 6
 // 6
 
 

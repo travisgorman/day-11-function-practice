@@ -14,8 +14,6 @@ var instructors = [
     { firstname : 'James', teaches : 'Ruby'}
 ];
 
-var moreWords = ['this', 'squiggling', 'ships', 'isis', 'miss', 'nope'];
-
 // ---------------------------
 // 1. Find largest number
 // ---------------------------
@@ -30,8 +28,6 @@ function largestNumber(arr){
   return largeNumber;
 }
 
-largestNumber( numbers );
-// expects 101
 
 
 // ---------------------------
@@ -47,8 +43,7 @@ function largestString( arr ){
   return largeString;
 }
 
-largestString( strings );
-// expects 'collection'
+
 
 // ---------------------------
 // 3. Find even numbers
@@ -63,8 +58,7 @@ function evenNumbers( arr ) {
   return even;
 }
 
-console.log( evenNumbers( numbers ) );
-// expects [12, 4, 18, 6]
+
 
 // ---------------------------
 // 4. Find odd numbers
@@ -79,8 +73,6 @@ function oddNumbers( arr ) {
   return odd;
 }
 
-console.log(oddNumbers( numbers ));
-// expects [1, 9, 7, 11, 3, 101, 5]
 
 // ---------------------------
 // 5. Find words that contain `is`
@@ -89,7 +81,6 @@ console.log(oddNumbers( numbers ));
 function isFinder( arr ){
   var hasIs = [];
   var noIs = [];
-
     arr.forEach( function( word ){
       if ( word.test( /\w*is\w*/ ) === true ){
         hasIs.push( word );
@@ -100,8 +91,6 @@ function isFinder( arr ){
   return hasIs;
 }
 
-console.log( isFinder( moreWords ) );
-
 // console.log( /\w*is\w*/.test( 'this' ) );
 // console.log( /\w*is\w*/.test( 'squiggling' ) );
 // console.log( /\w*is\w*/.test( 'Travis' ) );
@@ -109,8 +98,12 @@ console.log( isFinder( moreWords ) );
 // 5. Join Both Arrays Together
 // ---------------------------
 
-var stringsAndNumbers = strings.concat( numbers );
-console.log( stringsAndNumbers );
+// var stringsAndNumbers = strings.concat( numbers );
+
+function stringsAndNumbers(){
+  return strings.concat(numbers);
+}
+
 
 // ---------------------------
 // 6. Use the Instructors array and find all that teach JavaScript,

@@ -1,110 +1,52 @@
-var somePhrasage = 'this is a phrase';
+// console.assert( assertion, errorMessage );
+console.assert( sum(2, 3) === 5,
+  'sum() expects 5' );
+console.log('sure it is')
 
-function isVowel2( c ){
-    var vowels = ['a','e','i','o','u'];
-    if ( vowels.indexOf( c ) > -1 ) {
-      return true;
-    } else
-      return false;
-}
+console.assert( avg(11, 26, 8)===39.666666666666664,
+  'avg() failed - get back in there and fix your filthy code');
 
-function vowelPusher( c ){
-    var vowels = ['a','e','i','o','u'];
-    if ( vowels.indexOf( c ) > -1 ) {
-      return true;
-    } else
-      return false;
-}
+console.assert( getLength('string') === 6,
+  'getLength() expects 6' );
 
+console.assert( greaterThan( 5, 4 )===false,
+  'greaterThan failed. expects false' );
 
+console.assert( greet("Travis")==='Hello, Travis',
+  'greet() failed. whadjadoo??' );
 
-// function rovarspraket( str ){
-//   var space = ' ';
-//   var translated = [];
-//   var phrase = str.split('')
-//     .forEach( isVowel( letter ) ){
-//       if (letter){
+console.assert( madlib('SPLENDID!', 'jiggery-pokery', 'smidge', 'slovenly' ) ===
+'SPLENDID! quick jiggery-pokery brown smidge fox slovenly jumps over the fence',
+'madlib() failed. Go have a look' );
 
-//       }
-//     }
-// }
+console.assert( max(3,6) === 6,
+  'max() failed' );
 
+console.assert( maxOfThree(3,7,1)===7,
+  'maxOfThree() === miserable failure' );
 
+console.assert( isVowel('a')===true,
+  'isVowel() is acting all buggy');
 
-function rovarspraket(str){
-  var space = ' ';
-  var translated = [];
-  var phrase = str.split('')
-    .forEach(function( item ){
-      if (isVowel2( item )){
-        translated.push( item );
-    }
-  });
-  return translated;
-}
+console.assert( rovarspraket( 'this is a phrase' ) === 'tothohisos isos a pophrorasose',
+  'HA! BUSTED! You didn\'t even finish this one, did you?' );
+
+console.assert( reverse('travis') ==='sivart',
+  'reverse() doesn\'t do it\'s thing' );
 
 
-// if ( isVowel( letter )){
-//   translated.push( letter )
-// }
+console.assert(largestNumber( numbers )=== 101,'largestNumber() failed' );
 
-// im stuck with this one
+console.assert( largestString( strings ) ==='collection','largestString() failed');
 
-// rovarspraket( somePhrasage );
-// expects "tothohisos isos a pophrorasose"
+console.assert(evenNumbers(numbers) === [12, 4, 18, 6],'evenNumbers() failed- expects [12, 4, 18, 6] and instead, got'); console.log(evenNumbers(numbers));
+console.log('wtf');
 
+console.assert(oddNumbers( numbers ) === [1, 9, 7, 11, 3, 101, 5],'oddNumbers() failed- expects [1, 9, 7, 11, 3, 101, 5] and instead, got ' );
+console.log(oddNumbers(numbers));
+console.log('huh');
+console.log('i contest');
 
-var sentence = "quick brown fox jumps over the fence".split(" ");
-var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+console.assert(isFinder( strings ) === ['this','is'], 'isFinder() failed. You were trying to get cute, weren\'t you?');
 
-// removes 0 elements from index 2, and inserts 'drum'
-var removed = myFish.splice(2, 0, 'drum');
-var newPhrase = sentence.splice(0, 0, str1 )
-
-// myFish is ['angel', 'clown', 'drum', 'mandarin', 'surgeon']
-// removed is [], no elements removed
-
-
-function madlib( s1,s2,s3,s4 ) {
-  var sentence = "quick brown fox jumps over the fence";
-  var splitSentence = sentence.split(' ');
-  return splitSentence.splice(0, 0, str1 );
-
-  console.log( splitSentence );
-  console.log( sentence );
-  console.log( one );
-  
-  
-}
-
-
-// this one does what i want, but by side effect. It doesn't return the sentence on it's own. Have to call `sentence` to see result
-
-function madlib(s1, s2, s3, s4){
-  var sentence = "quick brown fox jumps over the fence".split(' ');
-      sentence.splice(0,0,s1);
-      sentence.splice(2,0,s2);
-      sentence.splice(4,0,s3);
-      sentence.splice(6,0,s4);
-      return sentence.join(' ');
-}
-
-console.log( madlib('wiz', 'bang', 'wee', 'woo') );
-
-
-// madlib('SPLENDID!', 'jiggery-pokery', 'smidge', 'slovenly' );
-// expects "SPLENDID! quick jiggery-pokery brown smidge fox slovenly jumps over the fence"
-
-// not sure why i can't get the prettier version below to work
-
-// function madlib2(s1, s2, s3, s4){
-//   var sentence = "quick brown fox jumps over the fence";
-//     .split(' ')
-//       .splice(0,0,s1)
-//         .splice(2,0,s2)
-//           .splice(4,0,s3)
-//             .splice(6,0,s4)
-//               .join(',');
-//       return sentence.join(' ');
-// }
-
+console.assert(stringsAndNumbers === ["this", "is", "a", "collection", "of", "words", 1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6], 'stringsAndNumbers() failed. Probably just a semicolon or something' );
